@@ -3,7 +3,7 @@
 __A scilab to C conversion extention for scilab.__
 - - - - - - 
 ###How to use this toolbox ?
-1. Download the [Scilab 5.5.2](http://www.scilab.org/download/latest.fr/)
+1. Download the [Scilab 5.5.2](http://www.scilab.org/download/latest)
 2. Clone this repository.
 3. Copy this cloned repository at /pathuptoscilab/scilab-5.5.2/share/scilab/contrib 
 4. Go to scilab console
