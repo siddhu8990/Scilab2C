@@ -38,6 +38,9 @@ uint8 u8AVRDigitalIns(uint8 port,uint8 pin);
 
 uint8 u8AVRDigitalOuts(uint8 port,uint8 pin,uint8 state);
 
+uint8 u8AVRDigitalPortSetups(uint8 port,uint8 direction);
+
+
 #ifdef  __cplusplus
 } /* extern "C" */
 #endif

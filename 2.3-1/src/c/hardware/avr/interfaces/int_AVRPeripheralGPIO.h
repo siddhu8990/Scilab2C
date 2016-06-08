@@ -22,6 +22,10 @@ extern "C" {
 #define AVRDigitalOut(in1,in2,in3) u8AVRDigitalOuts((uint8) in1,\
                                                   (uint8) in2, (uint8) in3);
 
+#define AVRDigitalPortSetup(in1,in2) u8AVRDigitalPortSetups((uint8) in1,\
+                                                  (uint8) in2);
+
+
 #ifdef  __cplusplus
 } /* extern "C" */
 #endif

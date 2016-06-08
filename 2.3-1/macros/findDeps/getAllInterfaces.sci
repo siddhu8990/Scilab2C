@@ -154,6 +154,8 @@ function allInterfaces = getAllInterfaces(Target)
       "src/c/hardware/avr/interfaces/int_AVRPeripheralADC.h"
       "src/c/hardware/avr/interfaces/int_AVRPeripheralPWM.h"
       "src/c/hardware/avr/interfaces/int_AVRUtil.h"
+      "src/c/hardware/avr/interfaces/int_AVRPeripheralTimer.h"
+      "src/c/hardware/avr/interfaces/int_AVRPeripheralUART.h"
 	];
 
   RPI_interfaces = [

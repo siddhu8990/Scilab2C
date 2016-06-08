@@ -127,13 +127,13 @@ for i = 1:size(allInterfaces, "*")
   //disp("Copying "+allInterfaces(i)+" in "+SCI2COutputPath+"/interfaces/");
   copyfile(allInterfaces(i), SCI2COutputPath+"/interfaces/");
 end
-
+disp(allLibraries);
 // -- Libraries
 PrintStepInfo('Copying libraries', FileInfo.GeneralReport,'both');
 for i = 1:size(allLibraries, "*")
   // DEBUG only
   //disp("Copying "+allInterfaces(i)+" in "+SCI2COutputPath+"/interfaces/");
-  copyfile(allLibraries(i), SCI2COutputPath+"/libraries/");
+  //copyfile(allLibraries(i), SCI2COutputPath+"/libraries/");
 end
 
 // --------------------------

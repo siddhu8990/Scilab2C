@@ -422,6 +422,10 @@
 #include "AVRPeripheralPWM.h"
 #include "int_AVRUtil.h"
 #include "AVRUtil.h"
+#include "int_AVRPeripheralTimer.h"
+#include "AVRPeripheralTimer.h"
+#include "int_AVRPeripheralUART.h"
+#include "AVRPeripheralUART.h"
 #endif
 
 /*RPi*/

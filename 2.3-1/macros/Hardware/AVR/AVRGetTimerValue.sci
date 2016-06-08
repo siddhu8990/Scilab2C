@@ -1,4 +1,4 @@
-function counts = AVRGetTimerValue(timer)
+function AVRGetTimerValue(timer)
 // Function to set the prescalar for timer.
 //
 // Calling Sequence

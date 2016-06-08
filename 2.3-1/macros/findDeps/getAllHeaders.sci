@@ -162,6 +162,8 @@ function allHeaders = getAllHeaders(Target)
       "src/c/hardware/avr/includes/AVRPeripheralADC.h"
       "src/c/hardware/avr/includes/AVRPeripheralPWM.h"
       "src/c/hardware/avr/includes/AVRUtil.h"
+      "src/c/hardware/avr/includes/AVRPeripheralTimer.h"
+      "src/c/hardware/avr/includes/AVRPeripheralUART.h"
 	    ]; 
 
   RPi_headers = [

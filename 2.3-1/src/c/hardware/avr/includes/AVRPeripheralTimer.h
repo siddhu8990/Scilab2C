@@ -15,10 +15,10 @@ extern "C" {
 #endif
 
 //Function prototypes
-uint8 u8AVRTimerSetups(uint8 timer, uint8 prescalar);
 
-uint8 u8AVRGetTimerValue(uint8 timer);
+uint16 u8AVRGetTimerValues(uint16 timer);
 
+uint8 u8AVRTimerSetups(uint8 timer, uint16 prescalar,uint8 clock_source);
 
 #ifdef  __cplusplus
 } /* extern "C" */

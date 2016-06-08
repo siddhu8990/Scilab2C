@@ -16,10 +16,18 @@ AVRSupportFunctions = [
 						"AVRDigitalIn"
 						"AVRDigitalOut"
 						"AVRDigitalSetup"
+						"AVRDigitalPortSetup"
+                                                "AVRTimerSetup"
 						"AVRGetTimerValue"
-						"AVRPWMSetDuty"
-						"AVRPWMSetup"
+						"AVRPWM0Setup"
+						"AVRPWM0SetDuty"
+						"AVRPWM1Setup"
+						"AVRPWM1SetDuty"
+						"AVRPWM2Setup"
+						"AVRPWM2SetDuty"
 						"AVRReadADC"
-						"AVRTimerSetup"];
+                                                "AVRSleep"
+						"AVRUARTSetup"
+						];
 
 endfunction

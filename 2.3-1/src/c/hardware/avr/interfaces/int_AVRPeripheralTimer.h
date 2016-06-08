@@ -14,9 +14,9 @@
 extern "C" {
 #endif
 
-#define AVRTimerSetup(in1,in2) u8AVRTimerSetups((uint8) in1, (uint8) in2);
+#define AVRGetTimerValue(in1) u8AVRGetTimerValues((uint16) in1);
 
-#define AVRGetTimerValue(in1) u8AVRGetTimerValues((uint8) in1);
+#define AVRTimerSetup(in1,in2,in3) u8AVRTimerSetups((uint8) in1, (uint16) in2, (uint8) in3);
 
 #ifdef  __cplusplus
 } /* extern "C" */

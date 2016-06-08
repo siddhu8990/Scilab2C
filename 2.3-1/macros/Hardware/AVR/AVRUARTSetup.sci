@@ -1,4 +1,4 @@
-function AVRTimerSetup(timer, prescalar)
+function AVRUARTSetup(mode, baudrate, stopbits, parity)
 // Function to set the prescalar for timer.
 //
 // Calling Sequence

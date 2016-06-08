@@ -972,13 +972,26 @@ function allSources = getAllSources(Target)
   //Files to be inserted only if output format selected is 'AVR'.
   AVR_files = [
       "src/c/hardware/avr/gpio/u8AVRDigitalSetups.c"
+      "src/c/hardware/avr/gpio/u8AVRDigitalPortSetups.c"
       "src/c/hardware/avr/gpio/u8AVRDigitalOuts.c"
       "src/c/hardware/avr/gpio/u8AVRDigitalIns.c"
       "src/c/hardware/avr/adc/u8AVRADCSetups.c"
       "src/c/hardware/avr/adc/u8AVRReadADCs.c"
-      "src/c/hardware/avr/pwm/u8AVRPWMSetups.c"
-      "src/c/hardware/avr/pwm/u8AVRPWMSetDutys.c"
-	  "src/c/hardware/avr/util/u16AVRSleeps.c"
+      "src/c/hardware/avr/pwm/u8AVRPWM0Setups.c"
+      "src/c/hardware/avr/pwm/u8AVRPWM2Setups.c"
+      "src/c/hardware/avr/pwm/u8AVRPWM1Setups.c"
+      "src/c/hardware/avr/pwm/u8AVRPWM0SetDutys.c"
+      "src/c/hardware/avr/pwm/u8AVRPWM2SetDutys.c"
+      "src/c/hardware/avr/pwm/u8AVRPWM1SetDutys.c"
+      "src/c/hardware/avr/util/u16AVRSleeps.c"
+      "src/c/hardware/avr/timer/u8AVRTimerSetups.c"
+      "src/c/hardware/avr/timer/u8AVRGetTimerValues.c"
+      "src/c/hardware/avr/uart/u8AVRUARTReceiveCharu8.c"
+      "src/c/hardware/avr/uart/u8AVRUARTSetups.c"
+      "src/c/hardware/avr/uart/dAVRUARTTransmitu8.c"
+      "src/c/hardware/avr/uart/i16AVRUARTTransmitu8.c"
+      "src/c/hardware/avr/uart/gAVRUARTTransmitu8.c"
+      "src/c/hardware/avr/uart/u16AVRUARTTransmitu8.c"
          ];
 
   RPI_files = [
