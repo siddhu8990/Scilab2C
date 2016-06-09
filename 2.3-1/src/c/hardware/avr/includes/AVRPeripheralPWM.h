@@ -1,7 +1,7 @@
 //This file defines functions prototypes related to PWM.
 //
 // Authors
-//     Siddhesh Wani
+//     Ashish Kamble
 //
 
 #ifndef __AVRPERIPHERALPWM_H__

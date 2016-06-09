@@ -1,31 +1,38 @@
 function AVRUARTSetup(mode, baudrate, stopbits, parity)
-// Function to set the prescalar for timer.
-//
-// Calling Sequence
-//     AVRTimerSetup(timer, prescalar)
-//
-// Parameters
-//     timer: timer to be set up (0,1,2)
-//     prescalar: prescalar to be used for timer (0-7)
-//     ***Refer datasheet for more description about timer
-//              
+// Function to Setup Serial Communication i.e UART or USART in ATmega16.
 // Description
-//     This function sets prescalr for timers. 'timer' decides which of the 
-//     three (0,1,2) timers available to be used. The 'prescalar' is needed for 
-//     deciding timer clock. Select appropriate prescalar depending on MCU clock
-//     and requirement.
+//        This function Setup the UART or USART for Serial Communicaion between ATmega16 
+//        and different micro controllers or between ATmega16 and Computer.   
+// 
+// Parameters
+//     mode : 
+//           0 for Asynchronous Normal mode
+//           1 for Asynchronous Double Speed mode
+//           2 for Synchronous mode
+//    
+//     baudrate : Enter one of the following available baudrates
+//                2400 , 4800 , 9600 , 14400 , 19200 , 28800 , 38400 , 57600 ,
+//                768000 , 115200 , 230400 , 250000 , 1000000 .
 //
+//     stopbits : 
+//               0 for one stopbit
+//               1 for two stopbits
 //
-// Examples
-//     AVRTimerSetup(0,1)   //Timer 0 with no scaling
-//
+//     parity : 
+//             0 for parity disabled
+//             1 for even parity    
+//             2 for odd parity
+// 
+//Examples
+//     AVRUARTSetup(0,9600,0,0); //This function will enable UART Communication for ATmega16
+//                                 with 9600 as baudrate,one stop bit and parity disabled
 // See also
-//     AVRGetTimerValue
+//     AVRUARTTransmit
+//     AVRUARTReceive
 //
 // Authors
-//     Siddhesh Wani
+//     Ashish Kamble
 //
-
 // This is curretly dummy function. It provides no functionality but is required 
 // for providing support for generating C code for AVR.
 endfunction

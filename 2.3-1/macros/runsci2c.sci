@@ -74,7 +74,7 @@ INIT_LoadLibraries(FileInfoDatFile);
 // ----------------------------------
 // --- Perform SCI2C Translation. ---
 // ----------------------------------
-if (RunMode == 'All' | RunMode == 'Translate' | RunMode == "FunCall")
+if (RunMode == 'All' | RunMode == 'Translate')
    FlagContinueTranslation = 1;
    while(FlagContinueTranslation == 1)
       UpdateSCI2CInfo(FileInfoDatFile);
@@ -85,18 +85,22 @@ if (RunMode == 'All' | RunMode == 'Translate' | RunMode == "FunCall")
    end
 end
 
-
-
+load(SharedInfoDatFile,'SharedInfo');
 // ---------------------------
 // --- Copy library files. ---
 // ---------------------------
-if (RunMode <> 'FunCall')
+
 global SCI2CHOME
 
 allSources = SCI2CHOME + "/" + getAllSources(Target);
 allHeaders = SCI2CHOME + "/" +getAllHeaders(Target);
 allInterfaces = SCI2CHOME + "/" + getAllInterfaces(Target);
-allLibraries = SCI2CHOME + "/" + getAllLibraries(Target);
+if(~isempty(getAllLibraries(Target)))
+  allLibraries = SCI2CHOME + "/" + getAllLibraries(Target);
+else
+  allLibraries = ''
+end
+//allLibraries = SCI2CHOME + "/" + getAllLibraries(Target);
 
 mkdir(SCI2COutputPath+"/src/");
 mkdir(SCI2COutputPath+"/src/c/");
@@ -106,10 +110,18 @@ mkdir(SCI2COutputPath+"/libraries/");
 
 // -- Sources
 PrintStepInfo('Copying sources', FileInfo.GeneralReport,'both');
+
 for i = 1:size(allSources, "*")
   // DEBUG only
   //disp("Copying "+allSources(i)+" in "+SCI2COutputPath+"/src/c/");
-  copyfile(allSources(i), SCI2COutputPath+"/src/c/");
+  //Copy ode related functions only if 'ode' function is used.
+  if(~isempty(strstr(allSources(i),'ode')))
+    if(size(SharedInfo.ODElist) <> 0)
+       copyfile(allSources(i), SCI2COutputPath+"/src/c/");
+    end
+  else
+    copyfile(allSources(i), SCI2COutputPath+"/src/c/");      
+  end
 end
 
 // -- Includes
@@ -129,13 +141,14 @@ for i = 1:size(allInterfaces, "*")
 end
 disp(allLibraries);
 // -- Libraries
-PrintStepInfo('Copying libraries', FileInfo.GeneralReport,'both');
-for i = 1:size(allLibraries, "*")
-  // DEBUG only
-  //disp("Copying "+allInterfaces(i)+" in "+SCI2COutputPath+"/interfaces/");
-  //copyfile(allLibraries(i), SCI2COutputPath+"/libraries/");
+if(~isempty(allLibraries))
+  PrintStepInfo('Copying libraries', FileInfo.GeneralReport,'both');
+  for i = 1:size(allLibraries, "*")
+    // DEBUG only
+    //disp("Copying "+allInterfaces(i)+" in "+SCI2COutputPath+"/interfaces/");
+    copyfile(allLibraries(i), SCI2COutputPath+"/libraries/");
+  end
 end
-
 // --------------------------
 // --- Generate Makefile. ---
 // --------------------------
@@ -176,7 +189,7 @@ end
 // FIXME : Give the user the ability to set this prefix
 FunctionPrefix = "SCI2C";
 C_GenerateSCI2CHeader(SCI2COutputPath+"/includes/", FunctionPrefix);
-end
+
 // -----------------
 // --- Epilogue. ---
 // -----------------

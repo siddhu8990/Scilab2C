@@ -197,14 +197,22 @@ global STACKDEDUG
 		//as it is passed as string to C function. Also enter this function in conversion list also.
 		if(ASTFunName == 'ode')
 			if NInArg == 4 
-				InArg(4).Scope = 'String';
-				ODEFunName = InArg(4).Name; 
+				//InArg(4).Scope = 'String';
+				ODEFunName = InArg(4).Name;
+				InArg(4).Name = 'odefn'+ InArg(4).Name
+				//To differentiate functions containing differential equations,
+				//'odefn' is added at the beginning of the function name.  
+				SharedInfo.ODElist($+1) = InArg(4).Name; 
+				//Add ode function in list. this will be used to add corresponding
+				//header file in main function.
+			elseif NInArg == 5 
+				ODEFunName = InArg(5).Name;
+				InArg(5).Name = 'odefn'+ InArg(5).Name
+				SharedInfo.ODElist($+1) = InArg(5).Name; 
 			end	
 		end
-	   [InArg,SharedInfo] = ST_GetInArgInfo(InArg,NInArg,FileInfo,SharedInfo);
-	   if(ASTFunName == 'ode')
-	   	disp(InArg(4).Name);
-		end
+	   [InArg,SharedInfo] = ST_GetInArgInfo(InArg,NInArg,FileInfo,SharedInfo,ASTFunName);
+	   
 	end
 
 	// #RNU_RES_B
@@ -358,14 +366,21 @@ global STACKDEDUG
 	   ST_InsOutArg(OutArg,NOutArg,FileInfo,SharedInfo,'all');
 	end
 	if ASTFunName == 'ode' then
-		ODE_InArg(1) = InArg(3)
-		ODE_InArg(2) = InArg(1)
-		ODE_OutArg(1) = OutArg(1)
-		ODE_CFunName = C_GenerateFunName(ODEFunName,ODE_InArg,2,ODE_OutArg,1);
-		
+		if NInArg == 4
+			ODE_InArg(1) = InArg(3)
+			ODE_InArg(2) = InArg(1)
+			ODE_OutArg(1) = OutArg(1)
+		elseif NInArg == 5 then
+			ODE_InArg(1) = InArg(4)
+			ODE_InArg(2) = InArg(2)
+			ODE_OutArg(1) = OutArg(1)
+		end	
+		ODE_CFunName = C_GenerateFunName('odefn'+ODEFunName,ODE_InArg,2,ODE_OutArg,1);
+		//Functions containing differential equations that are used with 'ode'
+		//function need to be handled differently.
+
 		[FunFound, FunType, FunSize, FunValue, FunFindLike, FunDimension] = ...
 		ST_Get(InArg(4).Name,FileInfo.GlobalVarFileName);
-		disp(FunFound);
 		//ST_Del(InArg(4).Name,FileInfo.GlobalVarFileName);
 		//ST_Set(ODE_CFunName, FunType, FunSize, FunValue, FunFindLike, FunDimension);
 	end

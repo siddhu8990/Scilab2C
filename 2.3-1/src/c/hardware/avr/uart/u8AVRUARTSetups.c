@@ -1,3 +1,17 @@
+/* Copyright (C) 2016 - IIT Bombay - FOSSEE
+
+ This file must be used under the terms of the CeCILL.
+ This source file is licensed as described in the file COPYING, which
+ you should have received as part of this distribution.  The terms
+ are also available at
+ http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+ Author: Ashish Kamble
+ Organization: FOSSEE, IIT Bombay
+ Email: toolbox@scilab.in
+*/ 
+//Function to Setup Serial communication for ATmega16.
+
+
 #include "AVRPeripheralUART.h"
 
 uint8 u8AVRUARTSetups(uint8 mode, uint32 baudrate, uint8 stopbits, uint8 parity)
@@ -20,15 +34,10 @@ uint8 u8AVRUARTSetups(uint8 mode, uint32 baudrate, uint8 stopbits, uint8 parity)
 	UCSRC &= ~(1<<UCPOL);  //Clock polarity bit
 	break;
 		
- case 2: //Synchronous master mode
+ case 2: //Synchronous mode
 	UCSRC |= (1<<UMSEL);  //Set bit 6 UMSEL and set clock polarity
 	UCSRC |= (1<<UCPOL);
 	break;
-		
- case 3: //Synchronous master mode
-	UCSRC |= (1<<UMSEL);  //Set bit 6 UMSEL and set clock polarity
-	UCSRC |= (1<<UCPOL);
-	break;		
 }
 
 //Set stop bits
@@ -128,6 +137,6 @@ switch(baudrate)
 }
 
 //Set data format
-UCSRC|= (1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);  
+UCSRC|= (1<<URSEL)|(1<<UC SZ0)|(1<<UCSZ1);  
 
 }

@@ -1,28 +1,17 @@
+/* Copyright (C) 2016 - IIT Bombay - FOSSEE
+
+ This file must be used under the terms of the CeCILL.
+ This source file is licensed as described in the file COPYING, which
+ you should have received as part of this distribution.  The terms
+ are also available at
+ http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+ Author: Ashish Kamble
+ Organization: FOSSEE, IIT Bombay
+ Email: toolbox@scilab.in
+*/ 
+//Function to Setup PWM output for OC2 pin.
+
 #include "AVRPeripheralPWM.h"
-
-
-/*
-waveform_mode:
-          0 for Phase correct PWM Mode
-          1 for Fast PWM Mode 
-          2 for CTC Mode
-
-output_mode:
-        For Phase Correct PWM Mode:
-        0 for Clear OC0 on compare match when up-counting. Set OC0 on compare
-        match when down-counting.
-        1 for Set OC0 on compare match when up-counting. Clear OC0 on compare
-        match when down-counting.
- 
-        For Fast PWM Mode:
-        0 for non-inverted output i.e Clear OC0 on compare match, set OC0 at BOTTOM.
-        1 for inverted output i.e Set OC0 on compare match, clear OC0 at BOTTOM.
-        
-        For CTC Mode:
-        0 to Clear OC0 on compare match
-        1 to Set OC0 on compare match
-        2 to toggle OC0 on compare match
-*/
 
 uint8 u8AVRPWM2Setups(uint8 waveform_mode, uint8 output_mode)
 {

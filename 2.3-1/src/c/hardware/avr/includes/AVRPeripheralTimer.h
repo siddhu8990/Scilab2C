@@ -1,7 +1,7 @@
 //This file defines functions prototypes related to Timer.
 //
 // Authors
-//     Siddhesh Wani
+//     Ashish Kamble
 //
 
 #ifndef __AVRPERIPHERALTIMER_H__
