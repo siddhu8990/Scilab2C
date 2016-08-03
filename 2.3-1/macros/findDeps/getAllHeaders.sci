@@ -145,7 +145,27 @@ function allHeaders = getAllHeaders(Target)
       "src/c/implicitList/implicitList.h"
       "src/c/differential_calculus/includes/ode.h"
       "src/c/differential_calculus/includes/diffc.h"
-      "src/c/Files/includes/files.h"];
+      "src/c/Files/includes/files.h"
+      "src/c/string/includes/convstr.h"
+	"src/c/elementaryFunctions/includes/dec2bin.h"
+	"src/c/elementaryFunctions/includes/dec2hex.h"
+	"src/c/elementaryFunctions/includes/dec2oct.h"
+	"src/c/elementaryFunctions/includes/oct2dec.h"
+	"src/c/elementaryFunctions/includes/hex2dec.h"
+	"src/c/elementaryFunctions/includes/bin2dec.h"
+	"src/c/elementaryFunctions/includes/dec2base.h"
+	"src/c/elementaryFunctions/includes/base2dec.h"
+	"src/c/elementaryFunctions/includes/cosd.h"
+	"src/c/elementaryFunctions/includes/cotd.h"
+	"src/c/elementaryFunctions/includes/coth.h"
+	"src/c/elementaryFunctions/includes/csc.h"
+	"src/c/elementaryFunctions/includes/cscd.h"
+	"src/c/elementaryFunctions/includes/csch.h"
+	"src/c/elementaryFunctions/includes/sec.h"
+	"src/c/elementaryFunctions/includes/secd.h"
+	"src/c/elementaryFunctions/includes/sech.h"
+	"src/c/elementaryFunctions/includes/float.h"
+];
 
   //Header files required for "Arduino" output
   Arduino_headers = [
@@ -155,9 +175,9 @@ function allHeaders = getAllHeaders(Target)
       "src/c/scilab-arduino/includes/cmd_analog_in.h"
       "src/c/scilab-arduino/includes/cmd_dcmotor_setup.h"
       "src/c/scilab-arduino/includes/cmd_dcmotor_run.h"
-      "src/c/scilab-arduino/includes/cmd_servo_attach.h"
-      "src/c/scilab-arduino/includes/cmd_servo_detach.h"
-      "src/c/scilab-arduino/includes/cmd_servo_move.h"
+      //"src/c/scilab-arduino/includes/cmd_servo_attach.h"
+      //"src/c/scilab-arduino/includes/cmd_servo_detach.h"
+      //"src/c/scilab-arduino/includes/cmd_servo_move.h"
       "src/c/scilab-arduino/includes/sleep.h"];
 
   AVR_headers = [

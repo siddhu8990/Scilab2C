@@ -140,7 +140,27 @@ function allInterfaces = getAllInterfaces(Target)
       "src/c/implicitList/int_OpColon.h"
       "src/c/differential_calculus/interfaces/int_ode.h"
       "src/c/differential_calculus/interfaces/int_diffc.h"
-      "src/c/Files/interfaces/int_files.h"];
+      "src/c/Files/interfaces/int_files.h"
+      "src/c/string/interfaces/int_convstr.h"
+	"src/c/elementaryFunctions/interfaces/int_dec2base.h"
+	"src/c/elementaryFunctions/interfaces/int_base2dec.h"
+	"src/c/elementaryFunctions/interfaces/int_dec2bin.h"
+	"src/c/elementaryFunctions/interfaces/int_dec2hex.h"
+	"src/c/elementaryFunctions/interfaces/int_dec2oct.h"
+	"src/c/elementaryFunctions/interfaces/int_oct2dec.h"
+	"src/c/elementaryFunctions/interfaces/int_hex2dec.h"
+	"src/c/elementaryFunctions/interfaces/int_bin2dec.h"
+	"src/c/elementaryFunctions/interfaces/int_cosd.h"
+	"src/c/elementaryFunctions/interfaces/int_cotd.h"
+	"src/c/elementaryFunctions/interfaces/int_coth.h"
+	"src/c/elementaryFunctions/interfaces/int_csc.h"
+	"src/c/elementaryFunctions/interfaces/int_cscd.h"
+	"src/c/elementaryFunctions/interfaces/int_csch.h"
+	"src/c/elementaryFunctions/interfaces/int_sec.h"
+	"src/c/elementaryFunctions/interfaces/int_secd.h"
+	"src/c/elementaryFunctions/interfaces/int_sech.h"
+	"src/c/elementaryFunctions/interfaces/int_float.h"
+];
 
   //Interface files required for "Arduino" output
   Arduino_interfaces = [

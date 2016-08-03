@@ -220,6 +220,74 @@
 #include "logspace.h"
 #include "int_logspace.h"
 
+/*interfacing dec2base*/
+#include "dec2base.h"
+#include "int_dec2base.h"
+
+/*interfacing base2dec*/
+#include "base2dec.h"
+#include "int_base2dec.h"
+
+/*interfacing dec2bin*/
+#include "dec2bin.h"
+#include "int_dec2bin.h"
+/*interfacing dec2hex*/
+#include "dec2hex.h"
+#include "int_dec2hex.h"
+
+/*interfacing dec2oct*/
+#include "dec2oct.h"
+#include "int_dec2oct.h"
+/*interfacing oct2dec*/
+#include "oct2dec.h"
+#include "int_oct2dec.h"
+/*interfacing hex2dec*/
+#include "hex2dec.h"
+#include "int_hex2dec.h"
+/*interfacing bin2dec*/
+#include "bin2dec.h"
+#include "int_bin2dec.h"
+
+/*interfacing cosd*/
+#include "cosd.h"
+#include "int_cosd.h"
+
+
+/*interfacing cotd*/
+#include "cotd.h"
+#include "int_cotd.h"
+
+/*interfacing coth*/
+#include "coth.h"
+#include "int_coth.h"
+
+/*interfacing csc*/
+#include "csc.h"
+#include "int_csc.h"
+
+/*interfacing cscd*/
+#include "cscd.h"
+#include "int_cscd.h"
+
+/*interfacing csch*/
+#include "csch.h"
+#include "int_csch.h"
+
+/*interfacing sec*/
+#include "sec.h"
+#include "int_sec.h"
+
+/*interfacing sech*/
+#include "sech.h"
+#include "int_sech.h"
+
+/*interfacing secd*/
+#include "secd.h"
+#include "int_secd.h"
+
+/*interfacing float*/
+#include "float.h"
+#include "int_float.h"
 
 /* IMPLICIT LISTS */
 /* interfacing implicitList/OpColon */
@@ -401,6 +469,10 @@
 /*Functions related to file handling*/
 #include "files.h"
 #include "int_files.h"
+
+/*Functions related to strings*/
+#include "convstr.h"
+#include "int_convstr.h"
 
 /*Scilab-arduino toolbox*/
 #ifdef Arduino1

@@ -28,7 +28,6 @@ SCI2CNInArgCheck(argn(2),9,9);
 // --- Initialization. ---
 // -----------------------
 
-
 UpdatedOutArg   = OutArg;
 for cntin = 1:NInArg
    IN(cntin).TP    = InArg(cntin).Type;
@@ -70,7 +69,6 @@ for counterin = 1:NInArg
    end
 end
 for counterout = 1:NOutArg
-    
    if(FunTypeAnnot == 'FA_TP_USER')
       UpdatedOutArg(counterout).Type   = FA_TP_USER(FunPrecSpecifier,DefaultPrecision);
    else
