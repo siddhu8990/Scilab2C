@@ -1,5 +1,7 @@
 GetRPISupportFunctions
 IsRPISupportFunction
+RPIDelay
+RPIDelayMicro
 RPI_DelayMicro
 RPI_DelayMilli
 RPI_DigitalIn

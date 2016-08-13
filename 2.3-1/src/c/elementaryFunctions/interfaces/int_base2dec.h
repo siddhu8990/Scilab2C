@@ -17,7 +17,8 @@
  #endif
 
 #define g2d0base2decd0(in,size,base)	gbase2decs(in,size[1],base)
-//#define g2base2decd2(in,size,out)	gbase2deca(in,size[1],out)
+#define d0d0base2decd0(in,base)	dbase2decs(in,base)
+//#define g2d0base2decd2(in,size,out)	gbase2deca(in,size[1],out)
 
  #ifdef  __cplusplus
  } /* extern "C" */

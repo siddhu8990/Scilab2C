@@ -17,6 +17,7 @@
  #endif
 
 #define g2hex2decd0(in,size)	ghex2decs(in,size[1])
+#define d0hex2decd0(in)	dhex2decs(in)
 
  #ifdef  __cplusplus
  } /* extern "C" */

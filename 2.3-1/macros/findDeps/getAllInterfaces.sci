@@ -160,6 +160,10 @@ function allInterfaces = getAllInterfaces(Target)
 	"src/c/elementaryFunctions/interfaces/int_secd.h"
 	"src/c/elementaryFunctions/interfaces/int_sech.h"
 	"src/c/elementaryFunctions/interfaces/int_float.h"
+	"src/c/elementaryFunctions/interfaces/int_factorial.h"
+	"src/c/elementaryFunctions/interfaces/int_interp1.h"
+	"src/c/elementaryFunctions/interfaces/int_primes.h"
+	"src/c/elementaryFunctions/interfaces/int_factor.h"
 ];
 
   //Interface files required for "Arduino" output

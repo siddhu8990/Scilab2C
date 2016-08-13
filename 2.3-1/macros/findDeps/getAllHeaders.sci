@@ -165,6 +165,10 @@ function allHeaders = getAllHeaders(Target)
 	"src/c/elementaryFunctions/includes/secd.h"
 	"src/c/elementaryFunctions/includes/sech.h"
 	"src/c/elementaryFunctions/includes/float.h"
+	"src/c/elementaryFunctions/includes/factorial.h"
+	"src/c/elementaryFunctions/includes/interp1.h"	
+	"src/c/elementaryFunctions/includes/primes.h"
+	"src/c/elementaryFunctions/includes/factor.h"
 ];
 
   //Header files required for "Arduino" output

@@ -631,6 +631,8 @@ function allSources = getAllSources(Target)
 
 	"src/c/elementaryFunctions/float/dfloats.c"
       "src/c/elementaryFunctions/float/dfloata.c"
+	"src/c/elementaryFunctions/float/sfloats.c"
+      "src/c/elementaryFunctions/float/sfloata.c"
       "src/c/elementaryFunctions/float/u8floats.c"
       "src/c/elementaryFunctions/float/u8floata.c"
       "src/c/elementaryFunctions/float/i8floats.c"
@@ -1006,6 +1008,7 @@ function allSources = getAllSources(Target)
 "src/c/elementaryFunctions/radix_conversions/dec2base/sdec2basea.c"
 
 "src/c/elementaryFunctions/radix_conversions/base2dec/gbase2decs.c"
+"src/c/elementaryFunctions/radix_conversions/base2dec/dbase2decs.c"
 
 "src/c/elementaryFunctions/radix_conversions/dec2hex/ddec2hexs.c"
 "src/c/elementaryFunctions/radix_conversions/dec2hex/i8dec2hexs.c"
@@ -1041,6 +1044,7 @@ function allSources = getAllSources(Target)
 "src/c/elementaryFunctions/radix_conversions/oct2dec/u16oct2deca.c"
 
 "src/c/elementaryFunctions/radix_conversions/hex2dec/ghex2decs.c"
+"src/c/elementaryFunctions/radix_conversions/hex2dec/dhex2decs.c"
 
 "src/c/elementaryFunctions/radix_conversions/bin2dec/dbin2decs.c"
 "src/c/elementaryFunctions/radix_conversions/bin2dec/i8bin2decs.c"
@@ -1063,14 +1067,14 @@ function allSources = getAllSources(Target)
 "src/c/elementaryFunctions/Trigonometry/cotd/scotda.c"
 "src/c/elementaryFunctions/Trigonometry/cotd/scotds.c"
 
-//"src/c/elementaryFunctions/Trigonometry/coth/dcotha.c"
-//"src/c/elementaryFunctions/Trigonometry/coth/dcoths.c"
-//"src/c/elementaryFunctions/Trigonometry/coth/scotha.c"
-//"src/c/elementaryFunctions/Trigonometry/coth/scoths.c"
-//"src/c/elementaryFunctions/Trigonometry/coth/zcoths.c"
-//"src/c/elementaryFunctions/Trigonometry/coth/zcotha.c"
-//"src/c/elementaryFunctions/Trigonometry/coth/ccoths.c"
-//"src/c/elementaryFunctions/Trigonometry/coth/ccotha.c"
+"src/c/elementaryFunctions/Trigonometry/coth/dcotha.c"
+"src/c/elementaryFunctions/Trigonometry/coth/dcoths.c"
+"src/c/elementaryFunctions/Trigonometry/coth/scotha.c"
+"src/c/elementaryFunctions/Trigonometry/coth/scoths.c"
+"src/c/elementaryFunctions/Trigonometry/coth/zcoths.c"
+"src/c/elementaryFunctions/Trigonometry/coth/zcotha.c"
+"src/c/elementaryFunctions/Trigonometry/coth/ccoths.c"
+"src/c/elementaryFunctions/Trigonometry/coth/ccotha.c"
 
 "src/c/elementaryFunctions/Trigonometry/csc/dcsca.c"
 "src/c/elementaryFunctions/Trigonometry/csc/dcscs.c"
@@ -1121,6 +1125,24 @@ function allSources = getAllSources(Target)
 "src/c/elementaryFunctions/Trigonometry/sech/zsechs.c"
 "src/c/elementaryFunctions/Trigonometry/sech/csecha.c"
 "src/c/elementaryFunctions/Trigonometry/sech/csechs.c"
+
+
+"src/c/elementaryFunctions/discrete_mathematics/factorial/dfactorials.c"
+"src/c/elementaryFunctions/discrete_mathematics/factorial/dfactoriala.c"
+"src/c/elementaryFunctions/discrete_mathematics/factorial/sfactorials.c"
+"src/c/elementaryFunctions/discrete_mathematics/factorial/sfactoriala.c"
+
+"src/c/elementaryFunctions/interpolation/dinterp1s.c"
+
+"src/c/elementaryFunctions/discrete_mathematics/primes/dprimess.c"
+
+"src/c/elementaryFunctions/discrete_mathematics/primes/sprimess.c"
+
+
+"src/c/elementaryFunctions/discrete_mathematics/factor/dfactors.c"
+
+"src/c/elementaryFunctions/discrete_mathematics/factor/sfactors.c"
+
 
  ];
   //Files to be inserted only if output format selected is 'Arduino'.

@@ -301,8 +301,6 @@ PrintStringInfo('u80'+ArgSeparator+'s0',ClassFileName,'file','y');
 PrintStringInfo('i80'+ArgSeparator+'s0',ClassFileName,'file','y');
 PrintStringInfo('u160'+ArgSeparator+'s0',ClassFileName,'file','y');
 PrintStringInfo('i160'+ArgSeparator+'s0',ClassFileName,'file','y');
-//PrintStringInfo('c0'+ArgSeparator+'d0',ClassFileName,'file','y');
-//PrintStringInfo('z0'+ArgSeparator+'d0',ClassFileName,'file','y');
 PrintStringInfo('s2'+ArgSeparator+'s2',ClassFileName,'file','y');
 
 PrintStringInfo('d2'+ArgSeparator+'s2',ClassFileName,'file','y');
@@ -5315,22 +5313,22 @@ PrintStringInfo('   Adding Class: '+ClassName+'.',GeneralReport,'file','y');
 ClassFileName = fullfile(SCI2CLibCAnnClsDir,ClassName+ExtensionCAnnCls);
 
 //Arguements specified: initial value, start time, time vector, ode function
-PrintStringInfo('NIN=         1',ClassFileName,'file','y');
+PrintStringInfo('NIN=         2',ClassFileName,'file','y');
 PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
 PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
 PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
 PrintStringInfo('OUT(1).SZ(2)= IN(1).SZ(2)',ClassFileName,'file','y');
 
-PrintStringInfo('NIN=         2',ClassFileName,'file','y');
-PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
-PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
-PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
-PrintStringInfo('OUT(1).SZ(2)= IN(1).SZ(1)',ClassFileName,'file','y');
+//PrintStringInfo('NIN=         2',ClassFileName,'file','y');
+//PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
+//PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
+//PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
+//PrintStringInfo('OUT(1).SZ(2)= IN(1).SZ(1)',ClassFileName,'file','y');
 
 
 ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
-PrintStringInfo('g2'+ArgSeparator+'g2',ClassFileName,'file','y');
-PrintStringInfo('g2g2'+ArgSeparator+'g0',ClassFileName,'file','y');
+//PrintStringInfo('g2'+ArgSeparator+'g2',ClassFileName,'file','y');
+PrintStringInfo('g2g2'+ArgSeparator+'g2',ClassFileName,'file','y');
 
 // --- Annotation Function And Function List Function. ---
 FunctionName = 'convstr'; 
@@ -5621,7 +5619,7 @@ PrintStringInfo('OUT(1).SZ(2)= ''1''',ClassFileName,'file','y');
 
 ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
 PrintStringInfo('g2'+ArgSeparator+'d0',ClassFileName,'file','y');
-//PrintStringInfo('g2'+ArgSeparator+'d2',ClassFileName,'file','y');
+PrintStringInfo('d0'+ArgSeparator+'d0',ClassFileName,'file','y');
 // --- Annotation Function And Function List Function. ---
 FunctionName = 'hex2dec'; 
 PrintStringInfo('      Adding Function: '+FunctionName+'.',GeneralReport,'file','y');
@@ -5648,6 +5646,7 @@ PrintStringInfo('OUT(1).SZ(2)= ''1''',ClassFileName,'file','y');
 
 ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
 PrintStringInfo('g2d0'+ArgSeparator+'d0',ClassFileName,'file','y');
+PrintStringInfo('d0d0'+ArgSeparator+'d0',ClassFileName,'file','y');
 //PrintStringInfo('g2'+ArgSeparator+'d2',ClassFileName,'file','y');
 // --- Annotation Function And Function List Function. ---
 FunctionName = 'base2dec'; 
@@ -5932,6 +5931,126 @@ PrintStringInfo('c0'+ArgSeparator+'c0',ClassFileName,'file','y');
 
 // --- Annotation Function And Function List Function. ---
 FunctionName = 'sech'; 
+PrintStringInfo('      Adding Function: '+FunctionName+'.',GeneralReport,'file','y');
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCAnnFunDir,ClassName,GeneralReport,ExtensionCAnnFun);
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCFLFunDir,ClassName,GeneralReport,ExtensionCFuncListFun);
+
+
+
+//------------------------------------
+//---- Class FACTORIAL --------------------
+//------------------------------------
+ClassName = 'FACTORIAL';
+
+// --- Class Annotation. ---
+PrintStringInfo('   Adding Class: '+ClassName+'.',GeneralReport,'file','y');
+ClassFileName = fullfile(SCI2CLibCAnnClsDir,ClassName+ExtensionCAnnCls);
+
+//Arguements specified: initial value, start time, time vector, ode function
+PrintStringInfo('NIN=         1',ClassFileName,'file','y');
+PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(2)= IN(1).SZ(2)',ClassFileName,'file','y');
+
+ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
+PrintStringInfo('d0'+ArgSeparator+'d0',ClassFileName,'file','y');
+PrintStringInfo('s0'+ArgSeparator+'s0',ClassFileName,'file','y');
+
+PrintStringInfo('d2'+ArgSeparator+'d2',ClassFileName,'file','y');
+PrintStringInfo('s2'+ArgSeparator+'s2',ClassFileName,'file','y');
+
+// --- Annotation Function And Function List Function. ---
+FunctionName = 'factorial'; 
+PrintStringInfo('      Adding Function: '+FunctionName+'.',GeneralReport,'file','y');
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCAnnFunDir,ClassName,GeneralReport,ExtensionCAnnFun);
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCFLFunDir,ClassName,GeneralReport,ExtensionCFuncListFun);
+
+
+// --- Class Interp1. ---
+// ------------------
+ClassName = 'Interp1';
+
+// --- Class Annotation. ---
+PrintStringInfo('   Adding Class: '+ClassName+'.',GeneralReport,'file','y');
+ClassFileName = fullfile(SCI2CLibCAnnClsDir,ClassName+ExtensionCAnnCls);
+PrintStringInfo('NIN=          4',ClassFileName,'file','y');
+PrintStringInfo('NOUT=         1       ',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).TP=    ''d''',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(2)= ''1''',ClassFileName,'file','y');
+
+// --- Function List Class. ---
+ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
+PrintStringInfo('d2d2d0g2'+ArgSeparator+'d0',ClassFileName,'file','y');
+//PrintStringInfo('d2'+ArgSeparator+'d2',ClassFileName,'file','y');
+//PrintStringInfo('s0'+ArgSeparator+'s0',ClassFileName,'file','y');
+//PrintStringInfo('s2'+ArgSeparator+'s2',ClassFileName,'file','y');
+
+//PrintStringInfo('z2'+ArgSeparator+'z2',ClassFileName,'file','y');
+//PrintStringInfo('z0'+ArgSeparator+'z0',ClassFileName,'file','y');
+//PrintStringInfo('c2'+ArgSeparator+'c2',ClassFileName,'file','y');
+//PrintStringInfo('c0'+ArgSeparator+'c0',ClassFileName,'file','y');
+
+// --- Annotation Function And Function List Function. ---
+FunctionName = 'interp1'; 
+PrintStringInfo('      Adding Function: '+FunctionName+'.',GeneralReport,'file','y');
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCAnnFunDir,ClassName,GeneralReport,ExtensionCAnnFun);
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCFLFunDir,ClassName,GeneralReport,ExtensionCFuncListFun);
+
+
+
+//------------------------------------
+//---- Class PRIMES --------------------
+//------------------------------------
+ClassName = 'PRIMES';
+
+// --- Class Annotation. ---
+PrintStringInfo('   Adding Class: '+ClassName+'.',GeneralReport,'file','y');
+ClassFileName = fullfile(SCI2CLibCAnnClsDir,ClassName+ExtensionCAnnCls);
+
+//Arguements specified: initial value, start time, time vector, ode function
+PrintStringInfo('NIN=         1',ClassFileName,'file','y');
+PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(2)= ''20''',ClassFileName,'file','y');
+
+ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
+PrintStringInfo('d0'+ArgSeparator+'d2',ClassFileName,'file','y');
+PrintStringInfo('s0'+ArgSeparator+'s2',ClassFileName,'file','y');
+
+
+// --- Annotation Function And Function List Function. ---
+FunctionName = 'primes'; 
+PrintStringInfo('      Adding Function: '+FunctionName+'.',GeneralReport,'file','y');
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCAnnFunDir,ClassName,GeneralReport,ExtensionCAnnFun);
+INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCFLFunDir,ClassName,GeneralReport,ExtensionCFuncListFun);
+
+
+//------------------------------------
+//---- Class FACTOR --------------------
+//------------------------------------
+ClassName = 'FACTOR';
+
+// --- Class Annotation. ---
+PrintStringInfo('   Adding Class: '+ClassName+'.',GeneralReport,'file','y');
+ClassFileName = fullfile(SCI2CLibCAnnClsDir,ClassName+ExtensionCAnnCls);
+
+//Arguements specified: initial value, start time, time vector, ode function
+PrintStringInfo('NIN=         1',ClassFileName,'file','y');
+PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(2)= ''7''',ClassFileName,'file','y');
+
+ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
+PrintStringInfo('d0'+ArgSeparator+'d2',ClassFileName,'file','y');
+PrintStringInfo('s0'+ArgSeparator+'s2',ClassFileName,'file','y');
+
+
+// --- Annotation Function And Function List Function. ---
+FunctionName = 'factor'; 
 PrintStringInfo('      Adding Function: '+FunctionName+'.',GeneralReport,'file','y');
 INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCAnnFunDir,ClassName,GeneralReport,ExtensionCAnnFun);
 INIT_GenAnnFLFunctions(FunctionName,SCI2CLibCFLFunDir,ClassName,GeneralReport,ExtensionCFuncListFun);

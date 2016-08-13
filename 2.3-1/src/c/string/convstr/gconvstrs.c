@@ -1,19 +1,20 @@
 #include <string.h>
 #include "convstr.h"
 
-void gconvstrs(int* in, int size, int type, int* out)
+void gconvstrs(char* in, int size,char* flag,int size2,char* out)
 {
-	int count;
-	// 0-to convert to lowercase
-	// 1-to convert to uppercase
-	for(count=0;count<size;count++)
+	int i=0,temp=0;
+	for(i=0;i<size;i++)
 	{
-		printf("%c ", in[count]);
-		if(type==0)
-		{	out[count]=tolower(in[count]);
-			printf("%c\n", out[count]);
+		temp= in[i];
+		if(flag[0]=='l' || flag[0]=='L')
+		{	temp=temp + 32;
+			out[i]=temp;
 		}
-		else
-			out[count]=toupper(in[count]);
+		else if(flag[0]=='u' || flag[0]=='U')
+		{
+			temp=temp - 32;
+			out[i]=temp;
+		}
 	}
 }

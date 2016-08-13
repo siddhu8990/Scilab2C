@@ -289,11 +289,26 @@
 #include "float.h"
 #include "int_float.h"
 
+/*interfacing factorial*/
+#include "factorial.h"
+#include "int_factorial.h"
+
+/*interfacing interp1*/
+#include "interp1.h"
+#include "int_interp1.h"
+
+/*interfacing primes*/
+#include "primes.h"
+#include "int_primes.h"
+
+/*interfacing factor*/
+#include "factor.h"
+#include "int_factor.h"
+
 /* IMPLICIT LISTS */
 /* interfacing implicitList/OpColon */
 #include "implicitList.h"
 #include "int_OpColon.h"
-
 
 /* OPERATIONS */
 /* interfacing assignation */

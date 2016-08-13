@@ -24,11 +24,13 @@ void ddec2bins(double in,int n,double* out)
 		j=i-1;
 	else
 		j=n-1;
+
 		i=0;
 	
 	while(i<j)
 	{
 		tmp=out[i];
+		//printf("%f",tmp);
 		out[i]=out[j];
 		out[j]=tmp;
 		i++;

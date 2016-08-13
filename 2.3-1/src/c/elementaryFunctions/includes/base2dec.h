@@ -18,6 +18,7 @@
  #endif
 
 double gbase2decs(char* in,int size,int base);
+double dbase2decs(double in,int base);
 //void ghex2deca(char* in,int size,double* out);
 
  #ifdef  __cplusplus 

@@ -18,6 +18,7 @@
  #endif
 
 double ghex2decs(char* in,int size);
+double dhex2decs(double in);
 
  #ifdef  __cplusplus 
  } /* extern "C" */

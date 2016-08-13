@@ -10,8 +10,7 @@ double gbase2decs(char* in,int size,int base)
 	double o=0.0;
 	for(i=0; in[i]!='\0'; i++)
     	{
-/* Finds the decimal equivalent of each hexadecimal digit
-*/
+	//printf("%c \n",in[i]);
         switch(in[i])
         {
             case '0':
