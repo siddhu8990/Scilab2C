@@ -33,7 +33,7 @@ void ddec2hexs(double in,char* out)
 		i++;
 		j--;
 	}
-	out[i+1]='  ';
+	//out[i+1]='  ';
 
     
 }

@@ -8,6 +8,8 @@ float sfactorials(float in)
 	n=(int)in;
     if (n < 0)
         printf("Error! Factorial of a negative number doesn't exist.");
+	else if(n>170)
+		printf("Inf");
     else
     {
         for(i=1; i<=n; i++)

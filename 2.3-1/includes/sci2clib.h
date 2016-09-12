@@ -489,6 +489,18 @@
 #include "convstr.h"
 #include "int_convstr.h"
 
+/*interfacing strsubst*/
+#include "strsubst.h"
+#include "int_strsubst.h"
+
+/*interfacing strrev*/
+#include "strrev.h"
+#include "int_strrev.h"
+
+/*interfacing strrchr*/
+#include "strrchr.h"
+#include "int_strrchr.h"
+
 /*Scilab-arduino toolbox*/
 #ifdef Arduino1
 #include "int_cmd_digital_out.h"
