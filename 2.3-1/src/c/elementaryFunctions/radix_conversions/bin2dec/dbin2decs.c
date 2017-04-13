@@ -2,10 +2,10 @@
 #include "bin2dec.h"
 #include <stdlib.h>
 #include <stdio.h>
-double dbin2decs(double in)
+long double dbin2decs(long double in)
 {   
     int base=1, rem=0;
-    double out=0.0;
+    long double out=0.0;
     int in1;
     in1=(int)in;
     while (in1 != 0)

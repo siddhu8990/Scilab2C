@@ -2,7 +2,7 @@
 #include "primes.h"
 void sprimess(float in, float* out)
 {
-     int i,j,k,n,counter=0;
+     int i=0,j=0,k=0,n=0,counter=0;
      n=(int)in;
      for(i=2;i<=n;i++)
      {
@@ -19,7 +19,6 @@ void sprimess(float in, float* out)
              {
                  out[k]=i;
 		 k++;
-		 //printf("%f \t",out[k]);
              }
      }
 }

@@ -4,7 +4,8 @@
 
 float sfactorials(float in)
 {
-	int i,n,factorial=1;
+	int i,n;
+	long long int fact=1;
 	n=(int)in;
     if (n < 0)
         printf("Error! Factorial of a negative number doesn't exist.");
@@ -14,9 +15,9 @@ float sfactorials(float in)
     {
         for(i=1; i<=n; i++)
         {
-            factorial *= i;
+            fact *= i;
         }
     }
 
-    return factorial;
+    return fact;
 }

@@ -6119,7 +6119,7 @@ PrintStringInfo('NIN=         1',ClassFileName,'file','y');
 PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
 PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
 PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
-PrintStringInfo('OUT(1).SZ(2)= ''20''',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(2)= FA_SZ_PRIMES(IN(1).VAL)',ClassFileName,'file','y');
 
 ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
 PrintStringInfo('d0'+ArgSeparator+'d2',ClassFileName,'file','y');
@@ -6147,7 +6147,7 @@ PrintStringInfo('NIN=         1',ClassFileName,'file','y');
 PrintStringInfo('NOUT=         1',ClassFileName,'file','y');
 PrintStringInfo('OUT(1).TP=    IN(1).TP',ClassFileName,'file','y');
 PrintStringInfo('OUT(1).SZ(1)= IN(1).SZ(1)',ClassFileName,'file','y');
-PrintStringInfo('OUT(1).SZ(2)= ''7''',ClassFileName,'file','y');
+PrintStringInfo('OUT(1).SZ(2)= FA_MUL(FA_SZ_FACTOR(IN(1).VAL),IN(1).SZ(1))',ClassFileName,'file','y');
 
 ClassFileName = fullfile(SCI2CLibCFLClsDir,ClassName+ExtensionCFuncListCls);
 PrintStringInfo('d0'+ArgSeparator+'d2',ClassFileName,'file','y');

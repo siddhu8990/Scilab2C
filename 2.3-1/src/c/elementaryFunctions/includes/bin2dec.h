@@ -17,7 +17,7 @@
 extern "C" {
 #endif
 
-double dbin2decs(double in);
+long double dbin2decs(long double in);
 int8 i8bin2decs(int8 in);
 //int16 i16bin2decs(int16 in);
 uint8 u8bin2decs(uint8 in);

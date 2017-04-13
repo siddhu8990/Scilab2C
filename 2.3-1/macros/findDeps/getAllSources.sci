@@ -1111,7 +1111,7 @@ function allSources = getAllSources(Target)
 "src/c/elementaryFunctions/Trigonometry/sec/dseca.c"
 "src/c/elementaryFunctions/Trigonometry/sec/sseca.c"
 "src/c/elementaryFunctions/Trigonometry/sec/ssecs.c"
-"src/c/elementaryFunctions/Trigonometry/sec/zseca.c"
+//"src/c/elementaryFunctions/Trigonometry/sec/zseca.c"
 "src/c/elementaryFunctions/Trigonometry/sec/zsecs.c"
 "src/c/elementaryFunctions/Trigonometry/sec/cseca.c"
 "src/c/elementaryFunctions/Trigonometry/sec/csecs.c"

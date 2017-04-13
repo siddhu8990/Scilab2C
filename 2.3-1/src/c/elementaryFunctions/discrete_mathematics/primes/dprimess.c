@@ -2,7 +2,7 @@
 #include "primes.h"
 void dprimess(double in, double* out)
 {
-     int i,j,k,n,counter=0;
+     int i=0,j=0,k=0,n=0,counter=0;
      n=(int)in;
      for(i=2;i<=n;i++)
      {
@@ -15,11 +15,10 @@ void dprimess(double in, double* out)
                                break;
                      }
              }
-             if(counter==0)
+            if(counter==0)
              {
-                 out[k]=i;
-		 k++;
-		 //printf("%f \t",out[k]);
+                 out[k++]=i;
+		 
              }
      }
 }
