@@ -26,7 +26,16 @@ function AVRDigitalOut(port,pin,state)
 // Authors
 //     Siddhesh Wani
 //
-
 // This is curretly dummy function. It provides no functionality but is required 
 // for providing support for generating C code for AVR.
+
+if((port==0)|(port>=8)) then 
+disp("Error : Inavalid input argument ''port'' in AVRDigitalOut function.");
+end
+if(pin>=8) then 
+disp("Error : Invalid input argument ''pin'' in AVRDigitalOut function.");
+end
+if(state>=2) then 
+disp("Error : Invalid input argument ''state'' in AVRDigitalOut function.");
+end
 endfunction

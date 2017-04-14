@@ -18,7 +18,7 @@ extern "C" {
 
 uint16 u8AVRGetTimerValues(uint16 timer);
 
-uint8 u8AVRTimerSetups(uint8 timer, uint16 prescalar,uint8 clock_source);
+uint8 u8AVRTimerSetups(uint8 timer, uint16 prescaler,uint8 clock_source);
 
 #ifdef  __cplusplus
 } /* extern "C" */

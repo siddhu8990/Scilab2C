@@ -100,9 +100,45 @@
 
 /* ELEMENTARY FUNCTIONS */
 
+/* interfacing atand */
+#include "atand.h"
+#include "int_atand.h"
+/* interfacing asind */
+#include "asind.h"
+#include "int_asind.h"
+/* interfacing asech */
+#include "asech.h"
+#include "int_asech.h"
+/* interfacing asecd */
+#include "asecd.h"
+#include "int_asecd.h"
+/* interfacing asec */
+#include "asec.h"
+#include "int_asec.h"
+/* interfacing acsch */
+#include "acsch.h"
+#include "int_acsch.h"
+/* interfacing acscd */
+#include "acscd.h"
+#include "int_acscd.h"
+/* interfacing acsc */
+#include "acsc.h"
+#include "int_acsc.h"
+/* interfacing acoth */
+#include "acoth.h"
+#include "int_acoth.h"
+/* interfacing acotd */
+#include "acotd.h"
+#include "int_acotd.h"
+/* interfacing acot */
+#include "acot.h"
+#include "int_acot.h"
 /* interfacing acos */
 #include "acos.h"
 #include "int_acos.h"
+/* interfacing acosd */
+#include "acosd.h"
+#include "int_acosd.h"
 /* interfacing acosh */
 #include "acosh.h"
 #include "int_acosh.h"

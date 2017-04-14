@@ -29,4 +29,14 @@ function AVRPWM1SetDuty(output_pin,duty,Top_Value)
 //
 // This is curretly dummy function. It provides no functionality but is required 
 // for providing support for generating C code for AVR.
+
+if(output_pin>=2) then
+disp("Error : Invalid input argument ''output_pin'' in AVRPWM1SetDuty function.");
+end
+if(duty>100) then 
+disp("Error : Invalid input argument ''duty'' in AVRPWM1SetDuty function.");
+end
+if(Top_Value>65535) then
+disp("Error : Invalid input argument ''Top_Value'' in AVRPWM1Setduty function.");
+end
 endfunction

@@ -12,7 +12,7 @@
 //
 //
 // Authors
-//     Siddhesh Wani
+//     Ashish Kamble
 //
 
 
@@ -39,7 +39,8 @@ uint16 u8AVRGetTimerValues(uint16 timer)
  		     SREG = sreg;	
  		     sei();
                      x = val;
-                     break;		     }
+                     break;		   
+                    }
 		case 2:
 		     {
                       x = TCNT2;

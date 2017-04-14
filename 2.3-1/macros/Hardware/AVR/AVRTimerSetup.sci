@@ -1,4 +1,4 @@
-function AVRTimerSetup(timer,prescalar,clock_source)
+function AVRTimerSetup(timer,prescaler,clock_source)
 //Function to setup Timers in ATmega16
 //Descrpition:
 //      This function tells the micro controller which clock source you will be using.
@@ -10,7 +10,7 @@ function AVRTimerSetup(timer,prescalar,clock_source)
 //             0 to setup timer0
 //             1 to setup timer1
 //             2 to setup timer2   
-//     prescalar : It is an integer value.
+//     prescaler : It is an integer value.
 //                 1 for no prescaling i.e clock will run at max 16Hz frequency
 //                 8 for prescaling clock by 8 i.e new clock frequency will be (clk/8)
 //                 64 for prescaling clock by 64 i.e new clock frequency will be (clk/64)
@@ -31,4 +31,16 @@ function AVRTimerSetup(timer,prescalar,clock_source)
 //
 //This is curretly dummy function. It provides no functionality but is required 
 //for providing support for generating C code for AVR.
+
+if(timer>=3) then
+disp("Error : Invalid input argument ''timer'' in AVRTimerSetup function.");
+end
+
+if(~((prescaler==1)|(prescaler==8)|(prescaler==64)|(prescaler==256)|(prescaler==1024))) then 
+disp("Error : Invalid input argument ''prescaler'' in AVRTimerSetup function.");
+end
+
+if(clock_source>=2) then
+disp("Error : Invalid input argument ''clock_source'' in AVRTimerSetup function.");
+end
 endfunction

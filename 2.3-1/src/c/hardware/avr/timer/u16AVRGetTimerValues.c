@@ -9,7 +9,7 @@
  Organization: FOSSEE, IIT Bombay
  Email: toolbox@scilab.in
 */ 
-//Function selects the clock source and timer with prescalar.
+//Function selects the clock source and timer with prescaler.
 
 
 #include "AVRPeripheralTimer.h"

@@ -27,4 +27,11 @@ function AVRDigitalPortSetup(port,direction)
 //
 // This is curretly dummy function. It provides no functionality but is required 
 // for providing support for generating C code for AVR.
+
+if((port==0)|(port>=5)) then 
+disp("Error : Invalid input argument ''port'' in AVRDigitalPortSetup function.");
+end
+if(direction>=2) then 
+disp("Error : Invalid input argument ''direction'' in AVRDigitalPortSetup function.");
+end
 endfunction

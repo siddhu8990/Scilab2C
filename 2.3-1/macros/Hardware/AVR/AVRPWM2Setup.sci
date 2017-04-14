@@ -37,4 +37,23 @@ function AVRPWM2Setup(waveform_mode,output_mode)
 //
 //This is curretly dummy function. It provides no functionality but is required 
 //for providing support for generating C code for AVR.
+
+if(waveform_mode>=3) then 
+disp("Error : Invalid input argument ''waveform_mode'' in AVRPWM2Setup function.");
+end
+if((waveform_mode==0)|(waveform_mode==1)) then
+{
+ //if((type(output_mode)~=8)|(output_mode>=2)) then
+ //disp("Error : Invalid input argument ''output_mode'' in AVRPWM2Setup function.");
+ //end
+}
+end
+if(waveform_mode==2) then
+{
+ if((type(output_mode)~=8)|(output_mode>=3)) then 
+ disp("Error : Invalid input argument ''output_mode'' in AVRPWM2Setup function.");
+ end
+}
+end
+
 endfunction

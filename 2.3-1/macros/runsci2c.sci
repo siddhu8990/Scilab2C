@@ -169,7 +169,9 @@ if (Target == 'Arduino')
        //disp("Copying "+arduinoFiles(i)+" in "+SCI2COutputPath+"/arduino/sci2carduino");
        copyfile(arduinoFiles(i), SCI2COutputPath+"/arduino/sci2c_arduino/");
    end
-
+elseif (Target == 'AVR')
+     AVRFile = SCI2CHOME + "/" + "src/c/hardware/avr/default_files/Makefile";
+     copyfile(AVRFile, SCI2COutputPath);
 else
 
    if BuildTool == "make"

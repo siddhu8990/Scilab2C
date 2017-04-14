@@ -1,4 +1,4 @@
-function AVRReadADC(channel)
+function adc_result = AVRReadADC(channel)
 // Function to get voltage on analog pin on AVR
 //
 // Calling Sequence
@@ -24,8 +24,11 @@ function AVRReadADC(channel)
 // Authors
 //     Siddhesh Wani
 //
-
-
 // This is curretly dummy function. It provides no functionality but is required 
 // for providing support for generating C code for AVR.
+
+if(channel>=8) then 
+disp("Error : Inavlid input argument ''channel'' in AVRReadADC function.");
+end
+adc_result = 0;   //adc_result has been initialised to avoid runtime error.
 endfunction

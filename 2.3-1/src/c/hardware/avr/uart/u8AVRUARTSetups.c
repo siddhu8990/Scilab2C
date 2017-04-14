@@ -129,7 +129,7 @@ switch(baudrate)
 	     UBRRL = 0x03;
 	     UBRRH = 0x00;
 	     break;
- 
+
  case 1000000:
 	      UBRRL = 0x00;
 	      UBRRH = 0x00;
@@ -137,6 +137,7 @@ switch(baudrate)
 }
 
 //Set data format
-UCSRC|= (1<<URSEL)|(1<<UC SZ0)|(1<<UCSZ1);  
+UCSRC|= (1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);  
 
+ return 0;
 }

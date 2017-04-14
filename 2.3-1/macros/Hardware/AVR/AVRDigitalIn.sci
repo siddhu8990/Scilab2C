@@ -26,7 +26,14 @@ function state = AVRDigitalIn(port,pin)
 // Authors
 //     Siddhesh Wani
 //
-
 // This is curretly dummy function. It provides no functionality but is required 
 // for providing support for generating C code for AVR.
+
+if((port==0)|(port>=5)) then 
+disp("Error : Inavalid input argument ''port'' in AVRDigitalIn function.");
+end
+if(pin>=8) then 
+disp("Error : Inavalid input argument ''pin'' in AVRDigitalIn function.");
+end
+state = 0;
 endfunction

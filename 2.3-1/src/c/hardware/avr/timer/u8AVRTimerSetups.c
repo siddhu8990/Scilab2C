@@ -9,17 +9,18 @@
  Organization: FOSSEE, IIT Bombay
  Email: toolbox@scilab.in
 */ 
-//Function selects the clock source and timer with prescalar.
+//Function selects the clock source and timer with prescaler.
 
 #include "AVRPeripheralTimer.h"
 
-uint8 u8AVRTimerSetups(uint8 timer,uint16 prescalar,uint8 clock_source)
+uint8 u8AVRTimerSetups(uint8 timer,uint16 prescaler,uint8 clock_source)
 {
+ 
  if(clock_source==0)
  {
   if(timer==0)
   {
-   switch(prescalar)
+   switch(prescaler)
    {
     case 1:    TCCR0 |= (1<<CS00);
                TCNT0 = 0x00;
@@ -35,7 +36,7 @@ uint8 u8AVRTimerSetups(uint8 timer,uint16 prescalar,uint8 clock_source)
    }
   else if(timer==2)
   {
-   switch(prescalar)
+   switch(prescaler)
    {
     case 1:    TCCR2 |= (1<<CS20);
                TCNT2 = 0x00;
@@ -51,7 +52,7 @@ uint8 u8AVRTimerSetups(uint8 timer,uint16 prescalar,uint8 clock_source)
    }
   else if(timer==1)
   {
-   switch(prescalar)
+   switch(prescaler)
    {
     case 1:    TCCR1B |= (1<<CS10);
                TCNT1H = 0x00;
@@ -90,6 +91,7 @@ uint8 u8AVRTimerSetups(uint8 timer,uint16 prescalar,uint8 clock_source)
     TCNT1L = 0x00;
    } 
   }  
+ return 0;
 }
 
    
