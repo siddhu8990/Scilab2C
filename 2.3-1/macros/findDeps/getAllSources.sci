@@ -10,7 +10,7 @@
 //
 //
 
-function allSources = getAllSources(SharedInfo)
+function allSources = getAllSources(SharedInfo,BuildTool)
       Target = SharedInfo.Target;
 
   //Files common to types of output format
@@ -626,10 +626,9 @@ function allSources = getAllSources(SharedInfo)
       "src/c/elementaryFunctions/uint8/u16uint8a.c"
       "src/c/elementaryFunctions/uint8/i16uint8s.c"
       "src/c/elementaryFunctions/uint8/i16uint8a.c"
-
-	"src/c/elementaryFunctions/float/dfloats.c"
+      "src/c/elementaryFunctions/float/dfloats.c"
       "src/c/elementaryFunctions/float/dfloata.c"
-	"src/c/elementaryFunctions/float/sfloats.c"
+      "src/c/elementaryFunctions/float/sfloats.c"
       "src/c/elementaryFunctions/float/sfloata.c"
       "src/c/elementaryFunctions/float/u8floats.c"
       "src/c/elementaryFunctions/float/u8floata.c"
@@ -639,8 +638,6 @@ function allSources = getAllSources(SharedInfo)
       "src/c/elementaryFunctions/float/u16floata.c"
       "src/c/elementaryFunctions/float/i16floats.c"
       "src/c/elementaryFunctions/float/i16floata.c"
-
-
       "src/c/elementaryFunctions/int8/dint8s.c"
       "src/c/elementaryFunctions/int8/dint8a.c"
       "src/c/elementaryFunctions/int8/sint8s.c"
@@ -1049,10 +1046,10 @@ function allSources = getAllSources(SharedInfo)
       "src/c/Files/mput/u16mputa.c"
       "src/c/Files/mput/i16mputa.c"
       "src/c/string/convstr/gconvstrs.c"
-	"src/c/string/strsubst/gstrsubsta.c"
-	//"src/c/string/strcmp/gstrcmps.c"
-	"src/c/string/strrev/gstrreva.c"
-	"src/c/string/strrchr/gstrrchra.c"
+      "src/c/string/strsubst/gstrsubsta.c"
+      //"src/c/string/strcmp/gstrcmps.c"
+      "src/c/string/strrev/gstrreva.c"
+      "src/c/string/strrchr/gstrrchra.c"
       "src/c/elementaryFunctions/radix_conversions/dec2bin/ddec2bins.c"
       "src/c/elementaryFunctions/radix_conversions/dec2bin/i8dec2bins.c"
       "src/c/elementaryFunctions/radix_conversions/dec2bin/i16dec2bins.c"
@@ -1293,10 +1290,18 @@ function allSources = getAllSources(SharedInfo)
       "src/c/imageProcessing/cvimgproc/imcvCanny.cpp"
       "src/c/imageProcessing/cvimgproc/imcvCornerHarris.cpp"];
 
+  if Target == "Arduino" & BuildTool == "nmake"
+    Required_addrs = get_rquird_fnctns(Standalone_files,Arduino_files,SharedInfo);
+  end
+
   if Target == "StandAlone"
   allSources = Standalone_files;
   elseif Target == "Arduino"
-  allSources = cat(1,Standalone_files, Arduino_files);
+  	if BuildTool == "nmake"
+   	 	allSources = Required_addrs;
+        else
+                allSources = cat(1,Standalone_files, Arduino_files);
+        end
   elseif Target == "AVR"
   allSources = cat(1,Standalone_files, AVR_files);
   elseif Target == "RPi"
